@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require "./lib/heroes"
+
+Heroes::CLI.new.call
+
