@@ -8,26 +8,22 @@ Ever wonder whether Harry Potter could take Spiderman in a fight? Let's find out
 
 1. Visit the [Superhero API](https://superheroapi.com/index.html) and log in to Facebook to get your authentication token
 2. Clone or copy this repo
-3. Create a .env file in the project directory
+3. Create a `.env` file in the project directory
     3a. The file can be named anything you like
     3b. Inside this file, define a variable called TOKEN equal to your authentication token *as a string*
         ex. TOKEN = "123456789..."
-    3c. This variable is called in lib/search.rb
-4. While in the project directory, 'bundle install' in your terminal 
+    3c. This variable is called in `lib/search.rb`
+4. While in the project directory, type `bundle install` in your terminal 
 
 ## Usage
 
-
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+1. To run the application, type `bin/heroes` in your terminal
+    1a. If you recieve an error about executing the file, you will need to allow read/write privileges by typing `chmod +x bin/heroes`
+2. You should be good to go from there! You will be prompted with a Menu of options. You may want to select 'help' the first time to see more detail on the Menu commands. 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/heroes.
+Bug reports and pull requests are welcome on GitHub at https://github.com/cole-flournoy/heroes-CLI.
 
 
 ## License
