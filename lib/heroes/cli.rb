@@ -104,24 +104,26 @@ class Heroes::CLI
             elsif input.to_i != 0 && input.to_i <= results.length
                 id = results[input.to_sym][1]
                 match = Heroes::Character.all.select{|character| character.id == id}
+                binding.pry
+                match = match[0]
                 
-                if match.empty? 
+                if match == nil
                     json_obj = Heroes::Search.by_id(id)
                     @@random.delete(id.to_i)
                     character = Heroes::Character.new(json_obj) 
                     character.detail
                     ##
                 else
-                    match[0].detail
+                    match.detail
                 end 
                 
                 puts "If you'd like to save this character for a 1v1 fight type 'fight'. If you'd like to return to the Menu, type anything else (hitting 'Enter' will also work fine)."
                 fight_response = gets.strip.downcase
                 if fight_response == "fight"
-                    if match.empty?
+                    if match == nil
                         Heroes::Character.fighters << character
                     else
-                        if Heroes::Character.fighters.include?(match[0])
+                        if Heroes::Character.fighters.include?(match)
                             puts "Sorry, the same person can't fight themself"
                             search
                         else
@@ -136,7 +138,7 @@ class Heroes::CLI
                         search
                     end
                 else
-                    " "
+                    ""
                 end
                 
             else
