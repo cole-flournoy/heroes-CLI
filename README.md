@@ -1,8 +1,8 @@
 # Heroes
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/heroes`. To experiment with that code, run `bin/console` for an interactive prompt.
+Welcome! This is a Ruby CLI application that pulls information from the Superhero API at 'https://superheroapi.com/index.html' to get details about characters from a variety of universes, compare their stats in a fight, etc. This is a student project for Flatiron School, so any comments or imporovements are more than welcome.
 
-TODO: Delete this and the text above, and describe your gem
+Ever wonder whether Harry Potter could take Spiderman in a fight? Let's find out! 
 
 ## Installation
 
@@ -22,7 +22,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+
 
 ## Development
 
