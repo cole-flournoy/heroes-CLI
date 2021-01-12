@@ -9,7 +9,7 @@ Ever wonder whether Harry Potter could take Spiderman in a fight? Let's find out
 1. Visit the [Superhero API](https://superheroapi.com/index.html) and log in to Facebook to get your authentication token
 2. Clone or copy this repo
 3. Create a `.env` file in the project directory
-    3a. The file can be named anything you like
+    3a. The file actually needs to be *called* `.env` (nothing before the extension) 
     3b. Inside this file, define a variable called TOKEN equal to your authentication token *as a string*
         ex. TOKEN = "123456789..."
     3c. This variable is called in `lib/search.rb`
