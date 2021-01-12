@@ -124,8 +124,8 @@ class Heroes::CLI
                         Heroes::Character.fighters << character
                     else
                         if Heroes::Character.fighters.include?(match)
-                            puts "Sorry, the same person can't fight themself"
-                            search
+                            puts "Sorry, the same person can't fight themself\n"
+                            
                         else
                             Heroes::Character.fighters << match
                         end
@@ -134,7 +134,7 @@ class Heroes::CLI
                     if Heroes::Character.fighters.length == 2 
                         Heroes::Character.fight
                     else
-                        puts "\nGreat, lets find their opponent!"
+                        puts "\nLet's find their opponent!"
                         search
                     end
                 else
