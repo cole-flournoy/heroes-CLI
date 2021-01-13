@@ -104,7 +104,6 @@ class Heroes::CLI
             elsif input.to_i != 0 && input.to_i <= results.length
                 id = results[input.to_sym][1]
                 match = Heroes::Character.all.select{|character| character.id == id}
-                binding.pry
                 match = match[0]
                 
                 if match == nil
