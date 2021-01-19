@@ -75,7 +75,7 @@ class Heroes::CLI
                 output = {}
                 count = 1
                 results["results"].each do |result| 
-                    output[count.to_s.to_sym] = [count, result["id"], result["name"], result["biography"]["full-name"]]              # - #{result["biography"]["full-name"]}"}  
+                    output[count.to_s.to_sym] = [count, result["id"], result["name"], result["biography"]["full-name"]]
                     count += 1
                 end
                 output
