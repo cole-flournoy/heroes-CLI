@@ -73,10 +73,8 @@ class Heroes::CLI
                 find_results
             else
                 output = {}
-                count = 1
-                results["results"].each do |result| 
-                    output[count.to_s.to_sym] = [count, result["id"], result["name"], result["biography"]["full-name"]]
-                    count += 1
+                results["results"].each.with_index(1) do |result, index| 
+                    output[index.to_s.to_sym] = [index, result["id"], result["name"], result["biography"]["full-name"]]
                 end
                 output
             end
@@ -84,7 +82,7 @@ class Heroes::CLI
     end
 
     def display_results(results)
-        puts "Your search yielded the following result(s):" 
+        puts "\nYour search yielded the following result(s):" 
         results.each do |key, value| 
             if value[3].length > 1
                 puts "      #{value[0]} - #{value[2]} (#{value[3]})" 
@@ -95,7 +93,7 @@ class Heroes::CLI
     end
 
     def select_result(results) 
-        puts "If you see the name of the character you were looking for, simply type the number to the left of your character and press 'Enter'"
+        puts "\nIf you see the name of the character you were looking for, simply type the number to the left of your character and press 'Enter'"
         puts "Otherwise, type 'new' for a new search"
         input = gets.strip
         unless input.downcase == "menu"
@@ -111,20 +109,18 @@ class Heroes::CLI
                     @@random.delete(id.to_i)
                     character = Heroes::Character.new(json_obj) 
                     character.detail
-                    ##
                 else
                     match.detail
                 end 
                 
                 puts "If you'd like to save this character for a 1v1 fight type 'fight'. If you'd like to return to the Menu, type anything else (hitting 'Enter' will also work fine)."
                 fight_response = gets.strip.downcase
-                if fight_response == "fight"
+                unless fight_response != "fight"
                     if match == nil
                         Heroes::Character.fighters << character
                     else
                         if Heroes::Character.fighters.include?(match)
                             puts "Sorry, the same person can't fight themself\n"
-                            
                         else
                             Heroes::Character.fighters << match
                         end
@@ -136,8 +132,6 @@ class Heroes::CLI
                         puts "\nLet's find their opponent!"
                         search
                     end
-                else
-                    ""
                 end
                 
             else

@@ -91,7 +91,6 @@ class Heroes::Character
     end
 
     def stats_detail
-        # self.powerstats.each{|key, value| puts "#{key.capitalize}: ".rjust(32) + value.rjust(3)}
         self.powerstats.each{|key, value| puts "#{value}: ".rjust(19) + key.capitalize.rjust(3)}
     end
 
