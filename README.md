@@ -2,6 +2,10 @@
 
 Welcome! This is a Ruby CLI application that pulls information from the Superhero API at 'https://superheroapi.com/index.html' to get details about characters from a variety of universes, compare their stats in a fight, etc. This is a student project for Flatiron School, so any comments or improvements are more than welcome.
 
+![main menu](images/menu.png)
+
+![index screen](images/index.png)
+
 Ever wonder whether Harry Potter could take Spiderman in a fight? Let's find out! 
 
 If you'd like to see a demo for this project, click [here](https://youtu.be/spwgn-CZbBY) for a video walk-through
@@ -22,6 +26,8 @@ If you'd like to see a demo for this project, click [here](https://youtu.be/spwg
 1. To run the application, type `bin/heroes` in your terminal
     1a. If you recieve an error about executing the file, you will need to allow read/write privileges by typing `chmod +x bin/heroes`
 2. You should be good to go from there! You will be prompted with a Menu of options. You may want to select 'help' the first time to see more detail on the Menu commands. 
+
+![help screen](images/help.png)
 
 ## Contributing
 
