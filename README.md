@@ -4,6 +4,8 @@ Welcome! This is a Ruby CLI application that pulls information from the Superher
 
 Ever wonder whether Harry Potter could take Spiderman in a fight? Let's find out! 
 
+If you'd like to see a demo for this project, click [here](https://youtu.be/spwgn-CZbBY) for a video walk-through
+
 ## Installation
 
 1. Visit the [Superhero API](https://superheroapi.com/index.html) and log in to Facebook to get your authentication token
