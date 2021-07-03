@@ -1,6 +1,6 @@
 # Heroes
 
-Welcome! This is a Ruby CLI application that pulls information from the Superhero API at 'https://superheroapi.com/index.html' to get details about characters from a variety of universes, compare their stats in a fight, etc. This is a student project for Flatiron School, so any comments or imporovements are more than welcome.
+Welcome! This is a Ruby CLI application that pulls information from the Superhero API at 'https://superheroapi.com/index.html' to get details about characters from a variety of universes, compare their stats in a fight, etc. This is a student project for Flatiron School, so any comments or improvements are more than welcome.
 
 Ever wonder whether Harry Potter could take Spiderman in a fight? Let's find out! 
 
